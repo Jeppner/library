@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a1cf9774ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <title>Book</title>
 </head>
 <body>
+    <div class="overlay hidden"></div>
     <div class="library">
     </div>
     <button class="newBookBtn">Add book</button>
-    <form id="submitNewBookForm" class="hidden" onsubmit="return false;">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" required>
-        <label for="author">Author</label>
-        <input type="text" name="author" id="author" required>
-        <label for="author">Number of pages</label>
-        <input type="number" name="numPages" id="numPages" min="1" required>
-        <label for="haveRead">Have you read it?</label>
-        <input type="checkbox" name="haveRead" id="haveRead">
-        <button type="submit" id="newBookSubmit">Submit</button>
-    </form>
+    <div class="form hidden">
+        <i class="fa fa-times fa-2x"></i>
+        <h2>Add new book</h2>
+        <form id="submitNewBookForm" onsubmit="return false;">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" required>
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" required>
+            <label for="author">Number of pages</label>
+            <input type="number" name="numPages" id="numPages" min="1" required>
+            <label for="haveRead">Have you read it?</label>
+            <input type="checkbox" name="haveRead" id="haveRead">
+            <button type="submit" id="newBookSubmit">Add book</button>
+        </form>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

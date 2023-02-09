@@ -1,3 +1,8 @@
+:not(i) * {
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,7 +20,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -51,4 +55,70 @@ input, label {
 
 .library {
     display: grid;
+}
+.overlay {
+	background: #27253ae7;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+h2 {
+	font-size: 2rem;
+	margin-bottom: 1em;
+	color: #494d5a;
+	font-weight: bold;
+}
+.form {
+	position: absolute;
+	z-index: 10;
+	left: 50%; 
+	top: 50%; 
+	-webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	background: white;
+	padding: 2em;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 450px;
+}
+input {
+	border: 0;
+	padding: 1em;
+	margin-bottom: 1em;
+	border-radius: 10px;
+	color: #a4acc1;
+	background: #f5f6f9;
+	font-size: 1.1rem;
+}
+input:not([type=checkbox]) {
+	width: 100%;
+}
+label {
+	margin: 0.5em 0 ;
+	color: #838a9f;
+	font-size: 1.2rem;
+}
+
+#newBookSubmit {
+	background: #4608d8;
+	width: 100%;
+	border: 0px;
+	padding: 1.5em;
+	border-radius: 10px;
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 1.1px;
+	font-size: 1.2rem;
+	font-weight: bold !important;
+}
+i {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	color: #838a9f;
+}
+i:hover {
+	cursor: pointer;
 }

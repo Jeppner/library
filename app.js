@@ -1,11 +1,14 @@
 const libraryDiv = document.querySelector('.library');
 const newBookBtn = document.querySelector('.newBookBtn');
 
+const form = document.querySelector('.form');
 const submitNewBookForm = document.getElementById('submitNewBookForm');
 const newBookSubmit = document.querySelector('#newBookSubmit');
 
 const library = [];
 let newBook;
+
+const overlay = document.querySelector('.overlay');
 
 class Book {
     constructor(title, author, numPages, haveRead) {
@@ -18,7 +21,8 @@ class Book {
 
 newBookBtn.addEventListener("click", e => {
     e.preventDefault();
-    submitNewBookForm.classList.toggle('hidden');
+    form.classList.toggle('hidden');
+    overlay.classList.toggle('hidden');
 })
 
 newBookSubmit.addEventListener("click", addBookToLibrary);
