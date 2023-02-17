@@ -13,24 +13,31 @@
     <title>Book</title>
 </head>
 <body>
-    <div class="overlay hidden"></div>
-    <div class="library">
+    <header>
+        <div class="container">
+            <h1>Library</h1>
+            <button class="newBookBtn">Add new book</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="overlay hidden"></div>
+        <div class="library">
+        </div>
+        <div class="form hidden">
+            <i class="fa fa-times fa-2x close-btn" alt="Close"></i>
+            <h2>Add new book</h2>
+            <form id="submitNewBookForm" onsubmit="return false;">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+                <label for="author">Number of pages</label>
+                <input type="number" name="numPages" id="numPages" min="1" required>
+                <label for="haveRead">Have you read it?</label>
+                <input type="checkbox" name="haveRead" id="haveRead">
+                <button type="submit" id="newBookSubmit">Add book</button>
+            </form>
     </div>
-    <button class="newBookBtn">Add book</button>
-    <div class="form hidden">
-        <i class="fa fa-times fa-2x"></i>
-        <h2>Add new book</h2>
-        <form id="submitNewBookForm" onsubmit="return false;">
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-            <label for="author">Author</label>
-            <input type="text" name="author" id="author" required>
-            <label for="author">Number of pages</label>
-            <input type="number" name="numPages" id="numPages" min="1" required>
-            <label for="haveRead">Have you read it?</label>
-            <input type="checkbox" name="haveRead" id="haveRead">
-            <button type="submit" id="newBookSubmit">Add book</button>
-        </form>
     </div>
     <script src="app.js"></script>
 </body>
